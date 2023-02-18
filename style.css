@@ -1,0 +1,129 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: grey;
+	font-family: sans-serif;
+	overflow-y: hidden;
+}img{
+	display: block;
+	max-width: 100%;
+}.welcome-page{
+	padding: 2em;
+}.intro{
+/*display: flex;*/
+/*border:1px solid red;*/
+}.intro>img{
+	/*width: 10px;*/
+	border: 1px solid red;
+}.welcome-page>img{
+	width: 90%;
+	margin: 2em auto;
+
+	}.welcome-page h1{
+	text-align: center;
+	font-size: 2.3rem;
+	font-weight: bolder;
+	color: teal;
+}.welcome-page button{
+	background-color: teal;
+	color: white;
+	border-style: none;
+	outline: none;
+	display: block;
+	margin: auto;
+	border-radius: 5px;
+	padding: 1em;
+
+}
+section.game-container{
+	background-color: mintcream;
+	margin: auto;
+	position: relative;
+	width:355px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 5px;
+	margin-top: 4%;
+}section.game-container::after{
+	position: absolute;
+	content: url("img/console.png");
+	top: 0;
+	left: -22%;
+	/*transform: translate(-50%,-50%);*/
+	z-index: -1;
+	animation: slidein 3s;
+	}.game-title{
+	padding: .8em 0;
+	border-bottom: 2px solid grey;
+}@keyframes slidein{
+	from{
+		transform: translateY(500px);
+	}to{
+		transform: translateY(0);
+	}
+	}.game-title{
+	/*text-indent: 20px;
+	/*border: 1px solid red;*/
+	display: flex;
+	align-items: center;
+	gap:1em;
+	/*justify-content: space-between;*/
+}.game-title img{
+	width: min(12%,50px);
+	margin-left: 1em;
+	animation: 2s float infinite;
+
+}@keyframes float{
+		30%{
+		transform: rotate(7deg);
+
+		}50%{
+		transform: rotate(-7deg);
+		}
+		70%{
+		transform: translateY(7px);
+		}
+}.game-board :is(p){
+	animation: fadein .9s ;
+	}.container-body{
+	padding: 1.3em;
+}.container-body>h3{
+text-align: center;
+letter-spacing: .4em;
+/*line-height: 2em;*/
+margin: 1em auto;
+}.game-info{
+	line-height: 2em;
+	margin: .5em 0;
+	color: grey;
+}[type="text"]{
+	width: 100%;
+	padding: .7em;
+}.control-btns{
+		/*border:1px solid red;*/
+	margin: 1.5em  auto .5em auto;
+	display: flex;
+	justify-content: space-between;
+}.control-btns button{
+	width: 47%;
+	outline: none;
+	border: none;
+	color: white;
+	padding: .7em;
+}.control-btns button:nth-child(2){
+	background-color: teal;
+}.control-btns button:nth-child(1){
+	background-color: grey;
+}:is(#start,.control-btns button):hover{
+	transform: scale(.9);
+}@keyframes fadein{
+	from{
+		transform: translateX(-14px);
+		opacity: 0;
+	}to{
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
