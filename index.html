@@ -3,41 +3,74 @@
 <head>
 	<title>Word Guessing Game</title>
 	<meta charset="utf-8">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="theme-color" content="grey">
+	<meta name="apple-mobile-web-app-status-bar-style" content="red">
+	<meta name="application-name" content="word Scramble Game">
+	<link rel="icon" type="image/png" href="img/mug.png">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="app.js" defer></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body>
 	<section class="game-container">
-		<div class="welcome-page">
+		<!-- <audio src="sounds/wind-chimes-bells.mp3" data-welcome-sound="true" controls style="display: none;" autoplay="true"></audio> -->
+		<div class="welcome-page" data-display="true">
 			<div class="intro">
-				<h1>Word Scrable</h1>
+				<h1></h1>
 			</div>
 			<img src="img/welcome-back-2.png">
 			<button id="start">Start Game &raquo;</button>
 		</div>
-		<div class="game-board" style="display: none;">
+		<div class="game-board" data-display="false" data-index="0">
 			<div class="game-title">
-			<img src="img/console.png">
-			<h2>Word Scramble Game </h2>
-		</div>
-		<div class="container-body">
+				<img src="img/platform-game.gif">
+				<h2>Word Scramble Game </h2>
+			</div>
+			<div class="progress-container">
+				<div class="progress"></div>
+			</div>
+		<div class="container-body" >
 			<h3></h3>
 			<div class="game-info">
-				<p>Hint: The process of increment of growth</p>
-				<p>Time Left : 30s</p>
-			</div>
-			<div class="game-controls">
-				<input type="text" name="" placeholder="Enter A Valid Word">
-				<div class="control-btns">
-					 <button>Refresh Word</button>
-					 <button data-check-word>Check Word</button>
+				<span><b>Hint :</b> </span><span id="hint"></span>
+				<br>
+				<div class="component-game-info">
+					<div>
+						<span id="time-left"><b>Time Left : </b></span>
+						<span id="timer">30s</span>
+					</div>
+						<div class="result" data-display="false">
+							<p>Correct </p>
+							<img src="img/checked.png">
+						</div>
+						
+						<div class="result false" data-display="false">
+							<p>Wrong</p>
+							<img src="img/forbidden.png">
+						</div>
+						
 				</div>
 			</div>
+			<div class="game-controls">
+				<form>
+					<input type="text" name="userinput" placeholder="Enter A Valid Word" focus autosave="false" autocomplete="false">
+					<div class="control-btns">
+						 <button>Refresh Word</button>
+						 <button data-check-word id="checkWord" >Check Word</button>
+					</div>
+				</form>
+			</div>
 		</div>
-	
-			
+		<div class="result-modal ">
+				<img src="img/right-decision.gif">
+				<p>Correct !!!</p>
+				<button class="next-btn">Next &raquo;</button>
 		</div>
+
+		</div>
+		<div class="snackBar"></div>
 	</section>
 </body>
 </html>
