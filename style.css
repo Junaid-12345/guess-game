@@ -136,7 +136,15 @@ section.game-container{
 		}
 }.game-board p,.welcome-page img,html,.game-info{
 	animation: fadein 1s ;
-}.container-body{
+}.game-board{
+	animation: opacityEffect 1s;
+}@keyframes opacityEffect{
+	from{
+		opacity: 0;
+	}to{
+		opacity: 1;
+	}
+	}.container-body{
 	padding: 1.3em;
 }.container-body>h3{
 text-align: center;
@@ -218,13 +226,14 @@ from{
 	text-align: center;
 	padding: .5em;
 	color: white;
-	display: none;
+	visibility: hidden;
 	border-top-right-radius: 20px;
 	border-top-left-radius: 20px;
 	width: 100%;
+	opacity: 0;
 	box-shadow: var(--shadow);
 	background-color: grey;
-	transition: all .3s;
+	transition: all .5s;
 }.result-modal::after{
 	content: "";
 	position: absolute;
@@ -251,5 +260,6 @@ from{
 	margin: .4em auto;
 }.result-modal.show{
 	transform: translateY(-126px);
-	display:block;
+	visibility: visible;
+	opacity: 1;
 }

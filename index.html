@@ -15,7 +15,7 @@
 </head>
 <body>
 	<section class="game-container">
-		<!-- <audio src="sounds/wind-chimes-bells.mp3" data-welcome-sound="true" controls style="display: none;" autoplay="true"></audio> -->
+		<!-- <audio src="sounds/negative_beeps.mp3" data-welcome-sound="true" control="true"></audio> -->
 		<div class="welcome-page" data-display="true">
 			<div class="intro">
 				<h1></h1>
@@ -27,6 +27,7 @@
 			<div class="game-title">
 				<img src="img/platform-game.gif">
 				<h2>Word Scramble Game </h2>
+				<!-- <img src="img/heart.png"> -->
 			</div>
 			<div class="progress-container">
 				<div class="progress"></div>
@@ -37,20 +38,10 @@
 				<span><b>Hint :</b> </span><span id="hint"></span>
 				<br>
 				<div class="component-game-info">
-					<div>
+					<div data-timer-container>
 						<span id="time-left"><b>Time Left : </b></span>
 						<span id="timer">30s</span>
 					</div>
-						<div class="result" data-display="false">
-							<p>Correct </p>
-							<img src="img/checked.png">
-						</div>
-						
-						<div class="result false" data-display="false">
-							<p>Wrong</p>
-							<img src="img/forbidden.png">
-						</div>
-						
 				</div>
 			</div>
 			<div class="game-controls">
